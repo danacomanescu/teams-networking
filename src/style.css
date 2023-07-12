@@ -65,6 +65,10 @@ footer {
 #teamsTable td {
   padding: 5px;
   border: 1px solid #057988;
+  line-height: 23px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #teamsTable th {
   background-color: #0798ab;
@@ -79,10 +83,23 @@ footer {
   box-sizing: border-box;
 }
 
+.table-action {
+  width: 80px;
+}
+
 .edit-btn,
 .delete-btn {
   color: #02638d;
   cursor: pointer;
+  display: none;
+}
+
+#teamsTable tr:hover .edit-btn {
+  display: inline-block;
+}
+
+#teamsTable tr:hover .delete-btn {
+  display: inline-block;
 }
 
 .delete-btn:hover {
